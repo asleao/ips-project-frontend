@@ -1,0 +1,20 @@
+<div class = "ferramentaContainer">   
+        <table class="bordered highlight centered responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">Id</th>
+              <th data-field="name">Nome</th>              
+              <th data-field="link">Link</th>                                  
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="ferramenta in ferramentas">
+            <td>{{ferramenta.id}}</td>
+            <td>{{ferramenta.nome}}</td>                        
+            <td>{{ferramenta.link}}</td>            
+          </tr>                   
+        </tbody>
+      </table>
+
+       <a class="btn-floating btn-large waves-effect waves-light red right" href="#/cadastroferramenta"><i class="material-icons">add</i></a>    
+</div>

@@ -19,5 +19,15 @@ angular.module("ipsProject").config(function($routeProvider){
             controller: "categoriaCtrl"                        
         });
 
+        $routeProvider.when("/ferramenta",{
+            templateUrl:"view/ferramentas.html" ,
+            controller: "ferramentaCtrl"                        
+        });
+
+         $routeProvider.when("/cadastroferramenta",{
+            templateUrl:"view/cadastroFerramenta.html" ,
+            controller: "ferramentaCtrl"                        
+        });
+
         $routeProvider.otherwise({redirectTo: "/home"});      
 });
