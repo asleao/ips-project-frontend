@@ -29,5 +29,24 @@ angular.module("ipsProject").config(function($routeProvider){
             controller: "ferramentaCtrl"                        
         });
 
+         $routeProvider.when("/habilidade",{
+            templateUrl:"view/habilidades.html" ,
+            controller: "habilidadeCtrl"                        
+        });
+
+        $routeProvider.when("/cadastrohabilidade",{
+            templateUrl:"view/cadastroHabilidade.html" ,
+            controller: "habilidadeCtrl"                        
+        });
+
+        $routeProvider.when("/organizacao",{
+            templateUrl:"view/organizacoes.html" ,
+            controller: "organizacaoCtrl"                        
+        });
+
+        $routeProvider.when("/cadastroorganizacao",{
+            templateUrl:"view/cadastroOrganizacao.html" ,
+            controller: "organizacaoCtrl"                        
+        });
         $routeProvider.otherwise({redirectTo: "/home"});      
 });

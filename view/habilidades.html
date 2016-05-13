@@ -1,0 +1,17 @@
+<div class = "habilidadeContainer">   
+        <table class="bordered highlight centered responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">Id</th>
+              <th data-field="descricao">Descrição</th>              
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="habilidade in habilidades">
+            <td>{{habilidade.id}}</td>
+            <td>{{habilidade.descricao}}</td>            
+          </tr>         
+        </tbody>
+      </table>
+       <a class="btn-floating btn-large waves-effect waves-light red right" href="#/cadastrohabilidade"><i class="material-icons">add</i></a>    
+</div>

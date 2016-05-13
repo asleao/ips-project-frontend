@@ -1,0 +1,21 @@
+<div class="container ">
+        <h4 class="left"><strong>Cadastro de Habilidade</strong></h4>
+        <div class="row">
+            <form class="col s12" name="formCadastroHabilidade">                     
+                      <div class="row">
+                                <div class="input-field col s6">
+                                         <i class="material-icons prefix">account_circle</i>
+                                          <input id="descricao" type="text" class="validate" placeholder="Descriçao" ng-model="habilidade.descricao" ng-required = "true">
+                                          <label for="descricao"> Descrição</label>
+                                </div>
+                      </div>             
+                                
+                      <button class="btn waves-effect waves-light right grey darken-4" type="submit" name="action" ng-click="cadastrarHabilidade(habilidade)" ng-disabled="formCadastroHabilidade.$invalid">Cadastrar
+                                <i class="material-icons right">send</i>
+                      </button>
+                      <button class="btn waves-effect waves-light right deep-orange" type="submit" name="action" ng-if="formCadastroHabilidade.$dirty">Limpar
+                                <i class="material-icons right">send</i>
+                      </button>
+            </form>
+        </div>
+</div>     
