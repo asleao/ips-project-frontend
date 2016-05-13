@@ -21,7 +21,8 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,catego
         carregarFerramentas();       
         carregarCategorias();            
         $(document).ready(function() {
-                $('select').material_select();                
+                $('select').material_select();                                
         });           
+
 });
 

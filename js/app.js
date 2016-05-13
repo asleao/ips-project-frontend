@@ -7,3 +7,4 @@ angular.module("ipsProject").config(function($httpProvider){
 $(document).ready(function() {
         $('select').material_select();
 });
+  

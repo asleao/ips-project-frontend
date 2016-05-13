@@ -57,5 +57,18 @@ angular.module("ipsProject").config(function($routeProvider){
             templateUrl:"view/cadastroOrganizacao.html" ,
             controller: "organizacaoCtrl"                        
         });
+
+        $routeProvider.when("/cadastroprojeto",{
+            templateUrl:"view/cadastroProjeto.html" ,
+            controller: "projetoCtrl" ,
+            resolve:{
+                    projetos: function(projetosAPI){
+                            return projetosAPI.getProjetos();
+                    },
+                    ferramentas: function(ferramentasAPI){
+                            return ferramentasAPI.getFerramentas();
+                    }
+            }                       
+        });
         $routeProvider.otherwise({redirectTo: "/home"});      
 });
