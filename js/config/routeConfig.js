@@ -5,6 +5,9 @@ angular.module("ipsProject").config(function($routeProvider){
             resolve:{
                     projetos: function(projetosAPI){
                             return projetosAPI.getProjetos();
+                    },
+                    ferramentas: function(ferramentasAPI){
+                            return ferramentasAPI.getFerramentas();
                     }
             }             
         });
