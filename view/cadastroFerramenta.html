@@ -3,21 +3,21 @@
         <div class="row">
             <form class="col s12" name="formCadastroFerramenta">                     
                       <div class="row">
-                                <div class="input-field col s6">
+                                <div class="input-field col s12">
                                          <i class="material-icons prefix">account_circle</i>
                                           <input id="name" type="text" class="validate" placeholder="nome" ng-model="ferramenta.nome" ng-required = "true">
                                           <label for="Username"> Nome</label>
                                 </div>
                       </div>             
                        <div class="row">
-                                <div class="input-field col s6">
+                                <div class="input-field col s12">
                                          <i class="material-icons prefix">home</i>
                                           <input id="link" type="text" class="validate" placeholder="Link" ng-model="ferramenta.link" ng-required = "true">
                                           <label for="link"> Link</label>
                                 </div>
                       </div>         
                       <div class="row">                       
-                                <div class="input-field col s6">                                                                                           
+                                <div class="input-field col s12">                                                                                           
                                           <select class="browser-default" ng-model="ferramenta.categoria" ng-options="categoria.nome for categoria in categorias" material-select watch>
                                               <option value="">Selecione uma categoria</option>
                                           </select>                                                      
