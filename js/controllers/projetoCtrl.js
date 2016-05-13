@@ -1,6 +1,7 @@
-angular.module("ipsProject").controller("projetoCtrl", function($scope,projetosAPI,projetos,ferramentas){
+angular.module("ipsProject").controller("projetoCtrl", function($scope,projetosAPI,projetos,ferramentas,pessoas){
     $scope.projetos= projetos.data;     
-    $scope.ferramentas= ferramentas.data;     
+    $scope.ferramentas= ferramentas.data;
+    $scope.pessoas=pessoas.data;     
 
     $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month

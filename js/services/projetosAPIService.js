@@ -11,4 +11,12 @@ angular.module("ipsProject").service("projetosAPI",function($http, config){
      this.postCadastrarProjeto = function(projeto){
         return $http.post(config.baseUrl +"/projeto/?format=json",projeto);
     };   
+
+    this.getPessoas = function(){
+        return $http.get(config.baseUrl + "/pessoas/?format=json");
+    };
+
+    this.getPessoa = function(id){
+        return $http.get(config.baseUrl + "/pessoas/"+id+"/?format=json");
+    };
 });

@@ -11,3 +11,9 @@ body {
 .logo:hover, .logo:visited, .logo:active {
   color: #9e9e9e;
 }
+
+#btnAdicionarPessoa{
+        position: relative;   
+        margin: 0px;
+        padding: 0px;     
+}

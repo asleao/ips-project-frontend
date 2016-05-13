@@ -8,6 +8,9 @@ angular.module("ipsProject").config(function($routeProvider){
                     },
                     ferramentas: function(ferramentasAPI){
                             return ferramentasAPI.getFerramentas();
+                    },
+                    pessoas:function(projetosAPI){
+                            return projetosAPI.getPessoas();
                     }
             }             
         });
@@ -70,6 +73,9 @@ angular.module("ipsProject").config(function($routeProvider){
                     },
                     ferramentas: function(ferramentasAPI){
                             return ferramentasAPI.getFerramentas();
+                    },
+                    pessoas:function(projetosAPI){
+                            return projetosAPI.getPessoas();
                     }
             }                       
         });
