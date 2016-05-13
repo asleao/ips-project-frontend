@@ -34,9 +34,17 @@
                                 </div>
                       </div>   
 
-                      <div class="row">                       
+                      <div class="row">    
+                                          <div class="input-field col">   
+                                                      <h4 >Ferramentas</h4>                                                      
+                                          </div>   
+                                          <div class="input-field col">   
+                                                      <a id ="btnAdicionarPessoa"class="btn-floating  waves-effect waves-light red right " href="#/cadastroferramenta"><i class="material-icons">add</i></a> 
+                                          </div>
+                       </div>  
+                      <div class="row">                                                           
                                 <div class="input-field col s12">                                                                                           
-                                          <select class="browser-default" ng-model="projeto.ferramenta" ng-options="ferramenta.nome for ferramenta in ferramentas" material-select watch>
+                                          <select class="browser-default" ng-model="projeto.ferramenta" ng-options="ferramenta.nome for ferramenta in ferramentas" material-select watch multiple>
                                               <option value="">Selecione uma ferramenta</option>
                                           </select>                                                      
                                 </div>
@@ -47,7 +55,7 @@
                                                       <h4 >Membros</h4>                                                      
                                           </div>   
                                           <div class="input-field col">   
-                                                      <a id ="btnAdicionarPessoa"class="btn-floating btn-large waves-effect waves-light red right " href="#/cadastropessoa"><i class="material-icons">add</i></a> 
+                                                      <a id ="btnAdicionarPessoa"class="btn-floating waves-effect waves-light red right " href="#/cadastropessoa"><i class="material-icons">add</i></a> 
                                           </div>
                        </div>                   
                       <div class="row">    
