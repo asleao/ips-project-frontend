@@ -1,4 +1,13 @@
 angular.module("ipsProject").config(function($routeProvider){
+        $routeProvider.when("/home",{
+            templateUrl:"view/home.html" ,
+            controller: "projetoCtrl" ,
+            resolve:{
+                    projetos: function(projetosAPI){
+                            return projetosAPI.getProjetos();
+                    }
+            }             
+        });
         $routeProvider.when("/cadastro",{
             templateUrl:"view/cadastro.html" ,
             controller: "usuarioCtrl"                                   

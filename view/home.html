@@ -1,0 +1,20 @@
+<h2>Projetos</h2>
+<div class = "projetoContainer">   
+        <table class="bordered highlight centered responsive-table">
+        <thead>
+          <tr>
+              <th data-field="id">Id</th>
+              <th data-field="nome">Nome</th>              
+              <th data-field="descricao">Descrição</th>              
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="projeto in projetos">
+            <td>{{projeto.id}}</td>
+            <td>{{projeto.nome}}</td>         
+            <td>{{projeto.descricao}}</td>            
+          </tr>         
+        </tbody>
+      </table>
+       <a class="btn-floating btn-large waves-effect waves-light red right" href="#/cadastroprojeto"><i class="material-icons">add</i></a>    
+</div>
