@@ -16,18 +16,14 @@
                                           <label for="link"> Link</label>
                                 </div>
                       </div>         
-                      <div class="row">
-                                <div class="input-field col s6">
-                                         <i class="material-icons prefix">list</i>                                                                                    
-                                          <!-- <select ng-model="categorias" ng-options="categoria.nome for categoria in categorias">
+                      <div class="row">                       
+                                <div class="input-field col s6">                                                                                           
+                                          <select class="browser-default" ng-model="ferramenta.categoria" ng-options="categoria.nome for categoria in categorias" material-select watch>
                                               <option value="">Selecione uma categoria</option>
-                                          </select>    -->         
-                                          {{categorias}}
-                                          <select class="" ng-model="ferramenta.categoria.id" material-select watch>
-                                            <option ng-repeat="categoria in categorias"></option>
-                                        </select>
+                                          </select>                                                      
                                 </div>
                       </div>        
+                       
 
                       <button class="btn waves-effect waves-light right grey darken-4" type="submit" name="action" ng-click="cadastrarFerramenta(ferramenta)" ng-disabled="formCadastroFerramenta.$invalid">Cadastrar
                                 <i class="material-icons right">send</i>

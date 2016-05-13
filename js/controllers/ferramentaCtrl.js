@@ -19,5 +19,9 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,catego
             }); 
         };
         carregarFerramentas();       
-        carregarCategorias();       
+        carregarCategorias();            
+        $(document).ready(function() {
+                $('select').material_select();                
+        });           
 });
+
