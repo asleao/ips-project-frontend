@@ -1,8 +1,14 @@
 angular.module("ipsProject").controller("ferramentaCtrl", function($scope,categoriasAPI,ferramentasAPI,$location){
-        $scope.ferramentas = [];        
+        $scope.ferramentas = [];   
+        $scope.categorias=[];     
         var carregarFerramentas = function(){
                 ferramentasAPI.getFerramentas().success(function(data){
                        $scope.ferramentas =data;
+                });    
+        }; 
+        var carregarCategorias = function(){
+                categoriasAPI.getCategorias().success(function(data){
+                       $scope.categorias =data;
                 });    
         }; 
         $scope.cadastrarFerramenta = function(ferramenta){            
@@ -12,5 +18,6 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,catego
                 $location.path("/ferramenta");
             }); 
         };
-        carregarFerramentas();              
+        carregarFerramentas();       
+        carregarCategorias();       
 });
