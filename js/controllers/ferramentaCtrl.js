@@ -4,6 +4,7 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,catego
         var carregarFerramentas = function(){
                 ferramentasAPI.getFerramentas().success(function(data){
                        $scope.ferramentas =data;
+                       $('select').material_select();  
                 });    
         }; 
         var carregarCategorias = function(){
