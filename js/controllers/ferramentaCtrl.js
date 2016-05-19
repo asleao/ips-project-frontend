@@ -12,7 +12,7 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,catego
                        $scope.categorias =data;
                 });    
         }; 
-        $scope.cadastrarFerramenta = function(ferramenta){            
+        $scope.cadastrarFerramenta = function(ferramenta){                   
             ferramentasAPI.postCadastrarFerramenta(ferramenta).success(function(data){
                delete $scope.ferramenta;
                 $scope.formCadastroFerramenta.$setPristine();
