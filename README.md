@@ -4,7 +4,7 @@ Este repositório contém o frontend do sistema IPS que foi implementado como tr
 
 ###**Pré-requisitos:**
 
-* Apache2
+* Apache2 >= 2.4
 * Qualquer navegador atualizado.
 
 ### **Instruções:**
