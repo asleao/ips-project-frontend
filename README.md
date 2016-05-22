@@ -16,4 +16,4 @@ Entre na pasta do seu servidor apache2 e em seguida baixe o projeto clicando em 
 ### Execução:
 
 Para acessar o sistema, digite:
-`localhost/ip-project-frontend/index.html`
+`localhost/ips-project-frontend/index.html`
