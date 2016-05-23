@@ -14,6 +14,15 @@ angular.module("ipsProject").config(function($routeProvider){
                     }
             }             
         });
+        $routeProvider.when("/cadastrocredencial",{
+            templateUrl:"view/cadastroCredencial.html" ,
+            controller: "credencialCtrl" ,
+            resolve:{
+                    credenciais: function(credenciaisAPI){
+                            return credenciaisAPI.getCredenciais();
+                    }
+            }             
+        });
         $routeProvider.when("/cadastro",{
             templateUrl:"view/cadastro.html" ,
             controller: "usuarioCtrl"                                   
@@ -36,12 +45,34 @@ angular.module("ipsProject").config(function($routeProvider){
 
         $routeProvider.when("/ferramenta",{
             templateUrl:"view/ferramentas.html" ,
-            controller: "ferramentaCtrl"                        
+            controller: "ferramentaCtrl", 
+            resolve:{
+                    ferramentas: function(ferramentasAPI){
+                            return ferramentasAPI.getFerramentas();
+                    },
+                    credenciais: function(credenciaisAPI){
+                            return credenciaisAPI.getCredenciais();
+                    },
+                    categorias: function(categoriasAPI){
+                            return categoriasAPI.getCategorias();
+                    }
+            }                         
         });
 
          $routeProvider.when("/cadastroferramenta",{
             templateUrl:"view/cadastroFerramenta.html" ,
-            controller: "ferramentaCtrl"                        
+            controller: "ferramentaCtrl" ,     
+            resolve:{
+                    ferramentas: function(ferramentasAPI){
+                            return ferramentasAPI.getFerramentas();
+                    },
+                    credenciais: function(credenciaisAPI){
+                            return credenciaisAPI.getCredenciais();
+                    },                    
+                    categorias: function(categoriasAPI){
+                            return categoriasAPI.getCategorias();
+                    }
+            }                    
         });
 
          $routeProvider.when("/habilidade",{

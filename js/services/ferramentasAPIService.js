@@ -9,6 +9,6 @@ angular.module("ipsProject").service("ferramentasAPI",function($http, config){
     };
 
      this.postCadastrarFerramenta = function(ferramenta){
-        return $http.post(config.baseUrl +"/ferramenta/?format=json",ferramenta);
+        return $http.post(config.baseUrl +"/ferramenta/?format=json",{id:ferramenta.id,nome:ferramenta.nome,link:ferramenta.link,categoria:ferramenta.categoria.id,credencial:ferramenta.credencial.id});
     };   
 });

@@ -23,21 +23,21 @@
                                           </select>                                                      
                                 </div>
                       </div>       
-                        <div class="row">    
+                      <div class="row">    
                                           <div class="input-field col">   
                                                       <h4 >Credenciais</h4>                                                      
                                           </div>   
+                                          <div class="input-field col">   
+                                                      <a id ="btnAdicionarPessoa"class="btn-floating  waves-effect waves-light red right " href="#/cadastrocredencial"><i class="material-icons">add</i></a> 
+                                          </div>
                                           <div class="row">
                                           <div class="input-field col s12">
-                                                   <i class="material-icons prefix">account_circle</i>
-                                                    <input id="username" type="text" class="validate" placeholder="Username" ng-model="ferramenta.credencial.username" ng-required = "true">
-                                                    <label for="username"> Username</label>
-                                          </div>
-                                          <div class="input-field col s12">
-                                                   <i class="material-icons prefix">lock</i>
-                                                    <input id="password" type="password" class="validate" placeholder="Password" ng-model="ferramenta.credencial.password" ng-required = "true">
-                                                    <label for="password"> Password</label>
-                                          </div>
+                                                   <div class="input-field col s12">                                                                                           
+                                                              <select class="browser-default" ng-model="ferramenta.credencial" ng-options="credencial.usuario for credencial in credenciais" material-select watch>
+                                                                  <option value="">Selecione uma credencial</option>
+                                                              </select>                                                      
+                                                    </div>
+                                          </div>                                          
                       </div>     
                        </div>
 

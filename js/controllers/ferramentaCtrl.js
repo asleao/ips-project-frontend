@@ -1,17 +1,8 @@
-angular.module("ipsProject").controller("ferramentaCtrl", function($scope,categoriasAPI,ferramentasAPI,$location){
-        $scope.ferramentas = [];   
-        $scope.categorias=[];     
-        var carregarFerramentas = function(){
-                ferramentasAPI.getFerramentas().success(function(data){
-                       $scope.ferramentas =data;
-                       $('select').material_select();  
-                });    
-        }; 
-        var carregarCategorias = function(){
-                categoriasAPI.getCategorias().success(function(data){
-                       $scope.categorias =data;
-                });    
-        }; 
+angular.module("ipsProject").controller("ferramentaCtrl", function($scope,credenciaisAPI,categoriasAPI,ferramentasAPI,$location,categorias,credenciais,ferramentas){
+        $scope.ferramentas = ferramentas.data;   
+        $scope.categorias=categorias.data;     
+        $scope.credenciais=credenciais.data;
+        
         $scope.cadastrarFerramenta = function(ferramenta){                   
             ferramentasAPI.postCadastrarFerramenta(ferramenta).success(function(data){
                delete $scope.ferramenta;
@@ -19,8 +10,7 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,catego
                 $location.path("/ferramenta");
             }); 
         };
-        carregarFerramentas();       
-        carregarCategorias();            
+             
         $(document).ready(function() {
                 $('select').material_select();                                
         });           
