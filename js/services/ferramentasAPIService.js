@@ -8,6 +8,10 @@ angular.module("ipsProject").service("ferramentasAPI",function($http, config){
         return $http.get(config.baseUrl + "/ferramenta/"+id+"/?format=json");
     };
 
+    this.deleteFerramenta = function(id){
+        return $http.delete(config.baseUrl + "/ferramenta/"+id+"/?format=json");
+    };
+
      this.postCadastrarFerramenta = function(ferramenta){
         return $http.post(config.baseUrl +"/ferramenta/?format=json",{id:ferramenta.id,nome:ferramenta.nome,link:ferramenta.link,categoria:ferramenta.categoria.id,credencial:ferramenta.credencial.id});
     };   

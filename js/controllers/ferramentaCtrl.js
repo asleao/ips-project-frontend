@@ -10,7 +10,14 @@ angular.module("ipsProject").controller("ferramentaCtrl", function($scope,creden
                 $location.path("/ferramenta");
             }); 
         };
-             
+        
+        // $scope.apagarFerramenta = function (ferramentas) {
+        //         $scope.ferramentas = $scope.ferramentas.filter(function (ferramenta) {
+        //                ferramentasAPI.deleteFerramenta(ferramenta.id); 
+        //                $location.path("/ferramenta");
+        //         });
+        // };
+        
         $(document).ready(function() {
                 $('select').material_select();                                
         });           
